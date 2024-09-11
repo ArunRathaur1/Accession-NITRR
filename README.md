@@ -1,6 +1,6 @@
 # Accession
 
-Welcome to **Accession**! 🎓
+Welcome to **Accession**!
 
 This application is designed to simplify the management of members in various clubs and committees in a college. It provides a centralized platform for organizing data, handling membership tasks, and ensuring seamless coordination across the college’s extra-curricular groups.
 
