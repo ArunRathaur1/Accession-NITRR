@@ -1,81 +1,38 @@
-# Turborepo starter
+# Accession
 
-This is an official starter Turborepo.
+Welcome to **Accession**! 🎓
 
-## Using this example
+This application is designed to simplify the management of members in various clubs and committees in a college. It provides a centralized platform for organizing data, handling membership tasks, and ensuring seamless coordination across the college’s extra-curricular groups.
 
-Run the following command:
+## 🚀 Features
 
-```sh
-npx create-turbo@latest
-```
+- **Member Management**: Easily add, update, and remove members for each club or committee.
+- **Role Assignment**: Assign leadership roles like Overall Coordinator, Head-Coordinator, Executive, and Volunteers.
+- **Streamlined Recruitment**: Manage the hiring process for new members, including applications, interviews, and selections.
+- **Activity Logs**: Track member activity and participation in events and meetings.
+- **Email Notifications**: Automatic email updates to members for important announcements.
+- **Data Security**: Secure storage of sensitive member information with access control features.
+- **User-friendly Interface**: Simple and intuitive UI to ensure everyone can use the app with ease.
 
-## What's inside?
+## 📸 Screenshots
 
-This Turborepo includes the following packages/apps:
+*Coming Soon!*
 
-### Apps and Packages
+## 🔮 Future Enhancements
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- **Event Management**: Organize and manage club events with RSVPs and reminders.
+- **Analytics Dashboard**: Visual insights into member participation, club performance, and more.
+- **Mobile App**: Expand to a cross-platform mobile app for easier on-the-go access.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## 🤝 Contributing
 
-### Utilities
+We welcome contributions from the community! Feel free to submit a pull request or open an issue for suggestions and improvements.
 
-This Turborepo has some additional tools already setup for you:
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+## 💻 Tech Stack
 
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- **Monorepo**: Turborepo
+- **Frontend**: Next.js
+- **Backend**: Node.js / Nest.js
+- **Database**: MongoDB
+- **Deployment**: Docker
