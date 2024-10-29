@@ -51,7 +51,6 @@ export class HiringUserDto {
   @IsNotEmpty()
   about: string;
 
-  @IsString()
   @IsOptional()
   priorAchievements?: string[];
 }

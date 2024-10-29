@@ -5,6 +5,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserModule } from './user/user.module';
 import { HiringModule } from './hiring/hiring.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+// import { AuthModule } from './auth/auth.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({

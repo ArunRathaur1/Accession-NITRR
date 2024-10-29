@@ -7,27 +7,22 @@ import {
   HttpStatus,
   Param,
   Patch,
-  Post,
+  UseGuards,
 } from '@nestjs/common';
 import { UserServices } from './user.service';
-import { CreateUserDto } from 'src/dtos/CreateUser.dto';
 import { UpdateUserDto } from 'src/dtos/UserUpdate.dto';
 import { User } from 'src/schema/user.schema';
 import mongoose from 'mongoose';
 import { HiringService } from 'src/hiring/hiring.service';
+import { AuthGuard } from 'src/auth/guards/auth/auth.guard';
 
 @Controller('user')
+@UseGuards(AuthGuard)
 export class UserController {
   constructor(
     private userService: UserServices,
     private hiringService: HiringService,
   ) {}
-
-  @Post()
-  async createUser(@Body() createUserDto: CreateUserDto) {
-    console.log(createUserDto);
-    return await this.userService.createUser(createUserDto);
-  }
 
   @Get('get-all-users')
   async getUsers() {

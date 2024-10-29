@@ -15,7 +15,6 @@ export class HiringController {
   constructor(private hiringService: HiringService) {}
   @Post()
   async formCollection(@Body() hiringUserDto: HiringUserDto) {
-    console.log(hiringUserDto);
     return this.hiringService.collectForm(hiringUserDto);
   }
 

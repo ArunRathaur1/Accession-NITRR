@@ -1,21 +1,23 @@
-import { Module } from '@nestjs/common';
-import { AuthService } from './services/auth/auth.service';
+/* eslint-disable prettier/prettier */
+import { forwardRef, Module } from '@nestjs/common';
 import { AuthController } from './controller/auth/auth.controller';
-import { UserServices } from 'src/user/user.service';
+import { AuthService } from './services/auth/auth.service';
 import { UserModule } from 'src/user/user.module';
+import { JwtModule } from '@nestjs/jwt';
+import { ConfigService } from '@nestjs/config';
 
 @Module({
-  imports: [UserModule],
-  providers: [
-    {
-      provide: 'AUTH_SERVICE',
-      useClass: AuthService,
-    },
-    {
-      provide: 'USER_SERVICE',
-      useClass: UserServices,
-    },
+  imports: [forwardRef(() => UserModule),
+    JwtModule.registerAsync({
+      inject: [ConfigService],
+      useFactory: async (configService: ConfigService) => ({
+        secret: configService.get<string>('JWT_SECRET'),
+        signOptions: { expiresIn: '120d' },
+      }),
+    }),
   ],
   controllers: [AuthController],
+  providers: [AuthService],
+  exports: [AuthService,JwtModule],
 })
 export class AuthModule {}

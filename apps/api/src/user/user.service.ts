@@ -14,6 +14,10 @@ export class UserServices {
     private readonly hiringService: HiringService,
   ) {}
 
+  //Getter for userModel
+  public getUserModel() {
+    return this.userModel;
+  }
   //CRUD
   async createUser(createUserDto: CreateUserDto) {
     try {

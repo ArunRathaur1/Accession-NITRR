@@ -34,7 +34,7 @@ export class Hiring extends Document {
   about: string;
 
   @Prop({ trim: true })
-  priorAchievements: string;
+  priorAchievements: string[];
 
   @Prop({ default: false })
   isHired: boolean;
